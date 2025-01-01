@@ -13,7 +13,9 @@ export function hourClick() {
         hour.classList.remove("hour-selected")
     
     })
+    
 
+    // E logo em seguida adiciona quando é selecionado
     selected.target.classList.add("hour-selected")
     
     })

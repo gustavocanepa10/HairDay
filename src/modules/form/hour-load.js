@@ -1,7 +1,9 @@
+// Sessão de horas.
 import {openingHours} from "../../utils/opening-hour.js"
 import dayjs from "dayjs"
 import { hourClick } from "./hour-click.js"
 
+// Lista das horas(ul)
 const hoursList = document.getElementById("hours")
 
 export function hoursLoad({ date }) {
@@ -9,13 +11,17 @@ export function hoursLoad({ date }) {
     // Recupera somente a hora
     const [scheduleHour] = hour.split(":")
     
+    
+
+    
+    
 
         
 
     // Adiciona a hora na data e verifica se está no passado.
     // Verificação dos horários.
     const isHourPast = dayjs(date).add(scheduleHour, "hour").isAfter(dayjs())
-      
+    
     // Define se o horário está disponivel.
     return {
         hour,
@@ -23,9 +29,7 @@ export function hoursLoad({ date }) {
         }
         
     })
-
-    console.log(opening)
-
+    
     // Renderizar os horários.
     opening.forEach(({hour, available}) => {
         const li = document.createElement("li")

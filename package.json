@@ -3,7 +3,7 @@
   "description": "Aplicação web de agendamento para corte de cabelo.",
   "author": "Gustavo Canepa",
   "scripts": {
-    "server": "json-server --watch server.json --port 3333",
+    "server": "json-server --watch server.json --port 8001",
     "build": "webpack",
     "dev": "webpack serve"
   },
