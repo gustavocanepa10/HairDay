@@ -19,7 +19,8 @@ form.addEventListener("submit", (event) => {
 
     try {
     // Recuperando o nome do cliente
-    const name = clientName.value.trim()
+    // trim remove espaço a mais, assim deixando só a palavra em si.
+     const name = clientName.value.trim()
     
     if (!name) {
         return alert("Informe o nome do cliente")
@@ -28,22 +29,29 @@ form.addEventListener("submit", (event) => {
 
     // Recupera o horário selecionado
     const hourSelected = document.querySelector(".hour-selected")
+    console.log(hourSelected)
     
     if (!hourSelected) {
-        return alert("Selecione o horário")
+        return alert("Selecione a hora")
     }
 
     // Recupera somente a hora
     const [hour] = hourSelected.innerText.split(":")
+    // console.log(hour)
     
 
     // Insere a hora na data
     const when = dayjs(selectedDate.value).add(hour,"hour")
+    // console.log(when)
     
 
     // Gera um ID
     const id = new Date().getTime()
 
+    // Estrutura do agendamento será
+    // id,
+    // name,
+    // when,
     console.log({
         id, 
         name,
