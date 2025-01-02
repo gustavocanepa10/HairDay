@@ -1,5 +1,7 @@
 import dayjs from "dayjs"
 
+import {scheduleNew} from "../../services/schedules-new.js"
+
 const form = document.querySelector("form")
 
 const selectedDate = document.getElementById("date")
@@ -13,7 +15,7 @@ const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 selectedDate.value = inputToday
 selectedDate.min = inputToday
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
     
     event.preventDefault()
 
@@ -52,11 +54,13 @@ form.addEventListener("submit", (event) => {
     // id,
     // name,
     // when,
-    console.log({
+    await scheduleNew({
         id, 
         name,
-        when,
+        when
     })
+
+    
 
 
 
