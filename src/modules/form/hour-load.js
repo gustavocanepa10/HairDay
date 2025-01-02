@@ -8,7 +8,8 @@ const hoursList = document.getElementById("hours")
 
 export function hoursLoad({ date }) {
 
-    // Limpa a lista de horários
+    // Limpa a lista de horários para os horários futuros
+    // Funcionalidade para o date-change
     hoursList.innerHTML = ""
 
     const opening = openingHours.map((hour) => {
