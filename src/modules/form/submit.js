@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
 
 import {scheduleNew} from "../../services/schedules-new.js"
-
+import {schedulesDay} from "../schedules/load.js"
 const form = document.querySelector("form")
 
 const selectedDate = document.getElementById("date")
@@ -54,12 +54,17 @@ form.addEventListener("submit", async (event) => {
     // id,
     // name,
     // when,
+    // Faz o agendamento
     await scheduleNew({
         id, 
         name,
         when
     })
 
+    // Recarregar os agendamentos
+    await schedulesDay()
+
+    clientName.value = ""
     
 
 
