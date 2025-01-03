@@ -1,5 +1,5 @@
 export const apiConfig = {
-    baseURL: "http://localhost:8001"
+    baseURL: "http://localhost:8003"
 }
 
 
