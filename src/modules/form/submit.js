@@ -56,7 +56,7 @@ form.addEventListener("submit", async (event) => {
     // when,
     // Faz o agendamento
     await scheduleNew({
-        id, 
+        id: id.toString(), 
         name,
         when
     })
