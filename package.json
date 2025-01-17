@@ -4,7 +4,7 @@
   "author": "Gustavo Canepa",
   "scripts": {
     "server": "json-server --watch server.json --port 8003",
-    "build": "webpack",
+    "build": "webpack build --output public",
     "dev": "webpack serve"
   },
   "dependencies": {
